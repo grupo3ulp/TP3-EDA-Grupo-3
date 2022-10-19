@@ -6,6 +6,8 @@ personas que no tienen ninguna discapacidad y otro que contenga las personas con
  */
 
 #include <iostream>
+#include <string>
+#include <cstring>
 using namespace std;
 
 struct Persona{
@@ -23,12 +25,13 @@ int main() {
     bool discAux;
     int personasConDiscAux=0;
     int personasSinDiscAux=0;
-    string nomAux;
+    char nomAux[30];
 
 
     for(int i=0;i<cantPersonas;i++) {
         cout<<"Ingrese nombre de persona "<<i+1<<endl;
-        cin>>nomAux;
+        cin.getline(nomAux,30);
+        cin.getline(nomAux,30);
         cout<<"Tiene discapacidad?. 0 = NO, 1 = SI"<<endl;
         cin >>discAux;
         discAux?++personasConDiscAux:++personasSinDiscAux;
