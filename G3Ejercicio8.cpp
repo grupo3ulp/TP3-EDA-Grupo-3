@@ -2,7 +2,6 @@
 los datos del empleado con mayor y menor salario*/
 
 #include <iostream>
-
 using namespace std;
 
 struct Empleado
