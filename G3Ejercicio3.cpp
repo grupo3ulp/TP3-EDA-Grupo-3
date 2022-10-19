@@ -12,11 +12,16 @@ struct Empleado{
 
 int main() {
 
-    InfoDireccion d1{"Bv. Bart","Springfield","Massachusetts"};
-    InfoDireccion d2{"Av. 9 de julio","Capital Federal","Buenos Aires"};
-    Empleado e1{"Bart Simpson",d1,2000};
-    Empleado e2{"Jose Juan Perez Gomez",d2,200000};
+    InfoDireccion d1{"Colon 546","Villa Mercedes","San Luis"};
+    InfoDireccion d2{"Av. 9 de julio 1056","Capital Federal","Buenos Aires"};
+    Empleado e1{"Ivan Urquiza",d1,100000};
+    Empleado e2{"Jose Juan Perez Gomez",d2,150000};
     Empleado empleados[2]={e1,e2};
+
+    for (int i = 0; i < 2; ++i) {
+        cout<<"Empleado "<<i+1<<":"<<endl;
+        cout<<"nombre: "<<empleados[i].nombre<<".\nsalario: "<<empleados[i].salario<<".\nDireccion:\nCalle: "<<empleados[i].direccion.calle<<", ciudad: "<<empleados[i].direccion.ciudad<<" provincia: "<<empleados[i].direccion.provincia<<"."<<endl;
+    }
 
     return 0;
 }
